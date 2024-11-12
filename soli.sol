@@ -5,6 +5,8 @@ contract krutoy {
 
     address owner;
 
+    uint public number;
+
     modifier onlyOwner(){
         require(msg.sender == owner,"You not owner");
         _;
@@ -13,4 +15,8 @@ contract krutoy {
     constructor(){
         owner = msg.sender;
     }
+    function increment() public {
+        number += 52;
+    }
+    
 }
